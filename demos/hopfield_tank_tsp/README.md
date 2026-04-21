@@ -63,6 +63,15 @@ lengths) are shown below:
 
 <img src="../../resources/tsp_results.png" width="100%"/>
 
+# Update April 2026
+
+I was able to reproduce the results generally, though the convergence rates with random point locations (instead of the hardcoded problem) results in 20-40% convergence, not the 70% reported with the associated hyperparameters (see hopfield_tank_tsp_net_demo.py)
+
+Furthermore, the results are clearly not close to the minimum spanning tree: 
+
+<img src="example_tours.png" width="100%"/>
+
+
 To learn more about the Hopfield-Tank Neural Network, please see:
 
 > J. J. Hopfield and D. W. Tank, "'Neural' Computation of Decisions in Optimization Problems", Biol. Cybern: 52, 141-152 (1985).

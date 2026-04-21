@@ -67,7 +67,7 @@ lengths) are shown below:
 
 I was able to reproduce the results generally, though the convergence rates with random point locations (instead of the hardcoded problem) results in 20-40% convergence, not the 70% reported with the associated hyperparameters (see hopfield_tank_tsp_net_demo.py)
 
-Furthermore, the results are clearly not close to the minimum spanning tree: 
+Furthermore, the results are clearly not close to the minimum tour: 
 
 <img src="example_tours.png" width="100%"/>
 

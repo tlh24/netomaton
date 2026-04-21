@@ -108,7 +108,7 @@ class HopfieldTankTSPNet:
         :param pos: a dictionary defining the NetworkX positions for the Graph
         """
         nx.draw_networkx(G, pos)
-        plt.show()
+        # plt.show()
 
     def _get_distances_map(self, distances):
         """

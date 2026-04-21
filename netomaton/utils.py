@@ -15,7 +15,7 @@ except:
 
 def plot_activities(trajectory_or_activities, shape=None, slice=-1, title='', colormap='Greys', vmin=None, vmax=None,
                     node_annotations=None, show_grid=False):
-    if len(trajectory_or_activities) is 0:
+    if len(trajectory_or_activities) == 0:
         raise Exception("there are no activities")
     if isinstance(trajectory_or_activities[0], State):
         # trajectory_or_activities is a trajectory, convert it to an activities list
@@ -78,7 +78,7 @@ def plot_grid_multiple(ca_list, shape=None, slice=-1, titles=None, colormap='Gre
 def animate_activities(trajectory_or_activities, title='', shape=None, save=False, interval=50, colormap='Greys',
                        vmin=None, vmax=None, show_grid=False, show_margin=True, scale=0.6, dpi=80, blit=True,
                        with_timestep=False):
-    if len(trajectory_or_activities) is 0:
+    if len(trajectory_or_activities) == 0:
         raise Exception("there are no activities")
     if isinstance(trajectory_or_activities[0], State):
         # trajectory_or_activities is a trajectory, convert it to an activities list
@@ -121,7 +121,7 @@ def animate_activities(trajectory_or_activities, title='', shape=None, save=Fals
         if with_timestep:
             title_text.set_text("timestep: %s" % (i['index']+1))
         return im, grid, title_text
-    ani = animation.FuncAnimation(fig, updatefig, interval=interval, blit=blit, save_count=len(activities))
+    ani = animation.FuncAnimation(fig, updatefig, interval=interval, blit=blit, save_count=len(activities), repeat=False)
     if save:
         ani.save('evolved.gif', dpi=dpi, writer="imagemagick")
     plt.show()

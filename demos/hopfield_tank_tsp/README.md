@@ -71,6 +71,7 @@ Furthermore, the results are clearly not close to the minimum spanning tree:
 
 <img src="example_tours.png" width="100%"/>
 
+---
 
 To learn more about the Hopfield-Tank Neural Network, please see:
 
